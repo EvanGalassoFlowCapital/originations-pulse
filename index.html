@@ -1,0 +1,95 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Flow Capital — Originations Pulse · Aug 1 – Aug 7, 2026</title>
+<style>
+  :root{ color-scheme:light; --bg:#fff; --card:#fff; --panel:#f7f8fa; --border:#e5e7eb; --soft:#f1f2f4; --text:#111827; --muted:#6b7280; --subtle:#9ca3af; --ink:#1f2937; --green:#166534; --red:#991b1b; }
+  *{ box-sizing:border-box; }
+  body{ margin:0; padding:30px 24px; background:var(--bg); color:var(--text); font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif; font-size:14px; line-height:1.5; }
+  .wrap{ max-width:860px; margin:0 auto; }
+  header{ display:flex; justify-content:space-between; align-items:flex-end; border-bottom:2px solid var(--ink); padding-bottom:13px; margin-bottom:18px; }
+  header h1{ margin:0; font-size:23px; letter-spacing:-0.01em; font-weight:700; }
+  header .range{ color:var(--muted); font-size:12.5px; text-align:right; }
+  .sec-h{ font-size:11.5px; text-transform:uppercase; letter-spacing:0.08em; font-weight:700; margin:0 0 9px; }
+  .sec-h.gap{ margin-top:22px; }
+  .lead{ font-size:13px; color:var(--text); margin:-2px 0 11px; } .lead b{ font-weight:600; color:var(--ink); }
+  .deals{ background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; margin-top:12px; }
+  .deals .r{ display:grid; grid-template-columns:1fr 84px 92px; gap:10px; align-items:center; padding:7px 15px; border-top:1px solid var(--soft); font-size:12.5px; }
+  .deals .r:first-child{ border-top:none; }
+  .deals .r span:not(:first-child){ text-align:right; font-variant-numeric:tabular-nums; }
+  .deals .r.gh{ background:var(--panel); border-top:1px solid var(--border); }
+  .deals .r.gh:first-child{ border-top:none; }
+  .deals .gh .nm{ display:flex; align-items:center; gap:6px; color:var(--ink); text-transform:uppercase; font-size:10px; letter-spacing:0.04em; font-weight:700; }
+  .deals .gh .nm .dot{ width:9px; height:9px; border-radius:2px; flex-shrink:0; }
+  .deals .gh .tt{ color:var(--ink); font-weight:700; } .deals .gh .dd{ font-weight:600; font-size:11.5px; }
+  .deals .dn{ color:var(--text); padding-left:15px; } .deals .dv{ font-weight:600; color:var(--ink); } .deals .muted{ color:var(--subtle); }
+  .deals .mv{ font-size:9px; font-weight:700; padding:1px 6px; border-radius:8px; margin-left:6px; text-transform:uppercase; letter-spacing:0.03em; }
+  .deals .mv.add{ background:#dcfce7; color:#166534; } .deals .mv.rem{ background:#fee2e2; color:#991b1b; }
+  .deals .r.rm .dv{ color:var(--subtle); text-decoration:line-through; }
+  .deals .rsn{ font-size:10.5px; color:#991b1b; font-weight:600; margin-left:7px; }
+  .up{ color:var(--green); font-weight:600; } .down{ color:var(--red); font-weight:600; } .k-flat{ color:var(--subtle); font-weight:600; }
+  .panel-card{ background:var(--card); border:1px solid var(--border); border-radius:10px; padding:15px 17px; }
+  .bar{ display:flex; height:26px; border-radius:6px; overflow:hidden; border:1px solid var(--border); margin-bottom:9px; }
+  .seg{ display:flex; align-items:center; justify-content:center; color:#fff; font-size:10.5px; font-weight:700; min-width:2px; }
+  .legend{ display:flex; flex-wrap:wrap; gap:9px 15px; font-size:11.5px; color:var(--muted); }
+  .legend .it{ display:inline-flex; align-items:center; gap:5px; } .legend .sw{ width:9px; height:9px; border-radius:2px; } .legend .n{ font-weight:700; color:var(--text); font-variant-numeric:tabular-nums; }
+  .tbl{ background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .tbl .r{ display:grid; gap:8px; padding:8px 15px; border-top:1px solid var(--soft); font-size:12.5px; align-items:center; }
+  .tbl .r:first-child{ border-top:none; }
+  .tbl.fun .r{ grid-template-columns:1fr 60px 60px 56px; } .tbl.par .r{ grid-template-columns:1fr 60px 56px; }
+  .tbl .r.h span{ font-size:9px; text-transform:uppercase; letter-spacing:0.03em; color:var(--muted); font-weight:600; }
+  .tbl .r.h span:not(:first-child), .tbl .r span:not(:first-child){ text-align:right; font-variant-numeric:tabular-nums; }
+  .tbl .nm{ font-weight:600; color:var(--ink); } .tbl .z{ color:var(--subtle); }
+  .tbl .g{ color:var(--green); font-weight:600; } .tbl .dn{ color:var(--red); font-weight:600; }
+  .cols{ display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:start; }
+  .hstats{ display:grid; grid-template-columns:repeat(5,1fr); gap:12px; }
+  .hstat{ background:var(--panel); border:1px solid var(--border); border-radius:9px; padding:11px 13px; }
+  .hstat .hv{ font-size:20px; font-weight:700; color:var(--ink); font-variant-numeric:tabular-nums; letter-spacing:-0.01em; }
+  .hstat .hl{ font-size:9.5px; text-transform:uppercase; letter-spacing:0.04em; color:var(--muted); font-weight:600; margin-top:3px; line-height:1.3; }
+  .goal2-list{ background:var(--card); border:1px solid var(--border); border-radius:10px; overflow:hidden; }
+  .g2row{ display:grid; grid-template-columns:1.4fr 1.5fr 62px 42px 74px; gap:12px; align-items:center; padding:9px 15px; border-top:1px solid var(--soft); font-size:12.5px; }
+  .g2row:first-child{ border-top:none; } .g2row .nm{ font-weight:500; }
+  .g2bar{ height:6px; background:#dfe3e8; border-radius:3px; position:relative; }
+  .g2bar .seg{ position:absolute; top:0; height:100%; border-radius:3px; }
+  .g2bar .over{ position:absolute; right:-8px; top:-2px; width:0; height:0; border-left:7px solid #4338ca; border-top:5px solid transparent; border-bottom:5px solid transparent; }
+  .g2frac{ text-align:right; font-variant-numeric:tabular-nums; color:var(--muted); } .g2pct{ text-align:right; font-weight:700; }
+  .g2st{ text-align:right; }
+  .g2dot{ display:inline-block; width:11px; height:11px; border-radius:2px; background:currentColor; vertical-align:middle; }
+  .st-track{ color:#166534; } .st-risk{ color:#d97706; } .st-off{ color:#991b1b; } .st-over{ color:#4338ca; }
+  .foot{ color:var(--subtle); font-size:11px; margin-top:22px; text-align:right; font-style:italic; }
+  @media print{ body{ padding:0; } }
+  @media (max-width:720px){ .cols{ grid-template-columns:1fr; } }
+</style></head><body><div class="wrap">
+  <header>
+    <div><h1>Originations Pulse <span style="color:var(--muted);font-weight:500;">· Flow Capital</span></h1></div>
+    <div class="range">Week of <strong>Aug 1 – Aug 7, 2026</strong><br>vs. prior week (Jul 25 – Jul 31)</div>
+  </header>
+
+  <div class="sec-h" style="color:#16a34a">Deployment</div>
+  <div class="lead"><b>$7.13M</b> funded of <b>$50M</b> CY target (14.3%). <b>$22.5M</b> in live term sheets → <b>$29.6M</b> if they close.</div>
+  <div class="panel-card"><div class="bar"><div class="seg" style="width:14.3%;background:#166534">$7.1M</div><div class="seg" style="width:17.0%;background:#b45309">$8.5M</div><div class="seg" style="width:28.0%;background:#86b89a">$14M</div><div class="seg" style="width:40.7%;background:#eef0f2"></div></div><div class="legend"><span class="it"><span class="sw" style="background:#166534"></span>Funded <span class="n">$7.1M</span></span><span class="it"><span class="sw" style="background:#b45309"></span>Signed TS <span class="n">$8.5M</span></span><span class="it"><span class="sw" style="background:#86b89a"></span>Issued TS <span class="n">$14M</span></span><span class="it"><span class="sw" style="background:#eef0f2;border:1px solid #e5e7eb"></span>Even-pace <span class="n">$30M</span></span></div></div>
+  <div class="deals"><div class="r gh"><span class="nm"><span class="dot" style="background:#166534"></span>Funded (YTD)</span><span class="tt">$7.1M</span><span class="dd"><span class="k-flat">±0</span> wk</span></div><div class="r"><span class="dn">Guardify</span><span class="dv">$4.2M</span><span></span></div><div class="r"><span class="dn">Miniluxe - Tranche 4</span><span class="dv">$1.9M</span><span></span></div><div class="r"><span class="dn">AskVet</span><span class="dv">$0.8M</span><span></span></div><div class="r"><span class="dn">Wondeur</span><span class="dv">$0.1M</span><span></span></div><div class="r gh"><span class="nm"><span class="dot" style="background:#b45309"></span>Signed TS</span><span class="tt">$8.5M</span><span class="dd"><span class="down">▼ −$14.1M</span> wk</span></div><div class="r"><span class="dn">Aliaswire</span><span class="dv">$8.5M</span><span></span></div><div class="r rm"><span class="dn">Charles Square <span class="rsn">Other</span></span><span class="dv">$14.1M</span><span></span></div><div class="r gh"><span class="nm"><span class="dot" style="background:#86b89a"></span>Issued TS</span><span class="tt">$14M</span><span class="dd"><span class="up">▲ +$4.9M</span> wk</span></div><div class="r"><span class="dn">Grubbly Farms <span class="mv add">+ new</span></span><span class="dv">$4.9M</span><span></span></div><div class="r"><span class="dn">Bright Security</span><span class="dv">$4.9M</span><span></span></div><div class="r"><span class="dn">LoadSpring</span><span class="dv">$4.2M</span><span></span></div></div>
+
+  <div class="cols" style="margin-top:22px">
+    <div>
+      <div class="sec-h" style="color:#1d4ed8">Funnel — this week</div>
+      <div class="tbl fun">
+        <div class="r h"><span>Stage</span><span>This wk</span><span>Last wk</span><span>Δ</span></div>
+        <div class="r"><span class="nm">New Leads</span><span>19</span><span class="z">19</span><span><span class="z">±0</span></span></div><div class="r"><span class="nm">→ MQL</span><span>11</span><span class="z">5</span><span><span class="g">+6</span></span></div><div class="r"><span class="nm">→ SAL</span><span>4</span><span class="z">2</span><span><span class="g">+2</span></span></div><div class="r"><span class="nm">→ SQL</span><span>1</span><span class="z">1</span><span><span class="z">±0</span></span></div><div class="r"><span class="nm">→ TS Issued</span><span>1</span><span class="z">2</span><span><span class="dn">−1</span></span></div>
+      </div>
+    </div>
+    <div>
+      <div class="sec-h" style="color:#475569">Partners</div>
+      <div class="tbl par">
+        <div class="r h"><span>Activity</span><span>This wk</span><span>Δ</span></div>
+        <div class="r"><span class="nm">New prospects</span><span>7</span><span><span class="dn">−4</span></span></div><div class="r"><span class="nm">New partners</span><span>1</span><span><span class="g">+1</span></span></div><div class="r"><span class="nm">Partner calls</span><span>11</span><span><span class="dn">−7</span></span></div><div class="r"><span class="nm">Partners emailed</span><span>162</span><span><span class="z">—</span></span></div><div class="r"><span class="nm">Referral leads in</span><span>7</span><span><span class="g">+2</span></span></div><div class="r"><span class="nm">Deals referred out</span><span>0</span><span><span class="z">±0</span></span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec-h gap" style="color:#475569">Partner health <span style="color:var(--subtle);font-weight:600;text-transform:none;letter-spacing:0">· 60-day engagement · stale = 6-month</span></div>
+  <div class="hstats"><div class="hstat"><div class="hv">62%</div><div class="hl">% Premium emailed</div></div><div class="hstat"><div class="hv">0%</div><div class="hl">% Premium called</div></div><div class="hstat"><div class="hv">8%</div><div class="hl">% Stale partners</div></div><div class="hstat"><div class="hv">68</div><div class="hl">Referral leads 60d</div></div><div class="hstat"><div class="hv">10</div><div class="hl">TS from partners 60d</div></div></div>
+
+  <div class="sec-h gap" style="color:#166534">Targets <span style="color:var(--subtle);font-weight:600;text-transform:none;letter-spacing:0">· week vs plan</span></div>
+  <div class="goal2-list"><div class="g2row"><span class="nm">Capital deployed (YTD)</span><div class="g2bar"><div class="seg" style="width:14%;background:#991b1b"></div></div><span class="g2frac">$7.1/50M</span><span class="g2pct">14.3%</span><span class="g2st st-off"><i class="g2dot" title="Off Track"></i></span></div><div class="g2row"><span class="nm">SAL → SQL conversion</span><div class="g2bar"><div class="seg" style="width:100%;background:#991b1b"></div></div><span class="g2frac">15–25%</span><span class="g2pct">41%</span><span class="g2st st-off"><i class="g2dot" title="Off Track"></i></span></div><div class="g2row"><span class="nm">SAL → SQL days</span><div class="g2bar"><div class="seg" style="width:40%;background:#166534"></div></div><span class="g2frac">< 15d</span><span class="g2pct">6d</span><span class="g2st st-track"><i class="g2dot" title="On Track"></i></span></div><div class="g2row"><span class="nm"># SQLs · QTD</span><div class="g2bar"><div class="seg" style="width:33%;background:#991b1b"></div></div><span class="g2frac">30 / qtr</span><span class="g2pct">10</span><span class="g2st st-off"><i class="g2dot" title="Off Track"></i></span></div><div class="g2row"><span class="nm">SQL → TS conversion</span><div class="g2bar"><div class="seg" style="width:77%;background:#166534"></div></div><span class="g2frac">15–30%</span><span class="g2pct">23%</span><span class="g2st st-track"><i class="g2dot" title="On Track"></i></span></div><div class="g2row"><span class="nm">SQL → TS days</span><div class="g2bar"><div class="seg" style="width:86%;background:#166534"></div></div><span class="g2frac">< 14d</span><span class="g2pct">12d</span><span class="g2st st-track"><i class="g2dot" title="On Track"></i></span></div><div class="g2row"><span class="nm"># TS Issued · QTD</span><div class="g2bar"><div class="seg" style="width:80%;background:#d97706"></div></div><span class="g2frac">10 / qtr</span><span class="g2pct">8</span><span class="g2st st-risk"><i class="g2dot" title="At Risk"></i></span></div><div class="g2row"><span class="nm">Partner calls / wk</span><div class="g2bar"><div class="seg" style="width:73%;background:#166534"></div></div><span class="g2frac">11/15</span><span class="g2pct">73%</span><span class="g2st st-track"><i class="g2dot" title="On Track"></i></span></div><div class="g2row"><span class="nm">New prospects / wk</span><div class="g2bar"><div class="seg" style="width:88%;background:#166534"></div></div><span class="g2frac">7/8</span><span class="g2pct">88%</span><span class="g2st st-track"><i class="g2dot" title="On Track"></i></span></div><div class="g2row"><span class="nm">Prospects → Partner / wk</span><div class="g2bar"><div class="seg" style="width:50%;background:#d97706"></div></div><span class="g2frac">1/2</span><span class="g2pct">50%</span><span class="g2st st-risk"><i class="g2dot" title="At Risk"></i></span></div></div>
+
+  <div class="foot">Originations Pulse · Week of Aug 1 – Aug 7, 2026 (vs Jul 25 – Jul 31) · figures pull live from HubSpot; $ in CAD.</div>
+</div></body></html>
